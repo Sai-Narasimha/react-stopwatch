@@ -27,9 +27,10 @@ export const Stopwatch = () => {
     <div className="stopwatch">
       <div style = {{backgroundColor: 'black', color : 'white', marginBottom : '10px'}}>
         {/* "0" is added for clear the gap  */}
-        <span> {("0" + Math.floor((timer / 60000) % 60)).slice(-2)}:</span>
-        <span> {("0" + Math.floor((timer / 1000) % 60)).slice(-2)}:</span>
-        <span> {("0" + Math.floor((timer / 10) % 100)).slice(-2)}</span>
+        <span> {("0" + Math.floor((timer / 600000) % 60)).slice(-2)}h:</span>
+        <span> {("0" + Math.floor((timer / 60000) % 60)).slice(-2)}m:</span>
+        <span> {("0" + Math.floor((timer / 1000) % 60)).slice(-2)}s</span>
+        {/* <span> {("0" + Math.floor((timer / 10) % 100)).slice(-2)}</span> */}
       </div>
       {/* when timerOn variable is off and timer state = 0 show start button  */}
       {!timerOn && timer === 0 && (
